@@ -1,5 +1,6 @@
 # State
-[js/state.js]
+[..blob/master/js/state.js]
+
 How to have have an object's functions do different things depending on the objects internal state.
 This pattern allows us to use a single interface that has multiple functionality without using any
 `if` statements.
