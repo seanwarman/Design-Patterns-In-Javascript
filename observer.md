@@ -1,5 +1,5 @@
 # Observer
-[Code](../js/observer.js)
+[Code](./js/observer.js)
 
 How to have an object *push* messages to multiple child objects simultaniously.
 
