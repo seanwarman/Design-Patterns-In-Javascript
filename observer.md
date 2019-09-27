@@ -1,4 +1,5 @@
 # Observer
+[js/observer.js]
 How to have an object *push* messages to multiple child objects simultaniously.
 
 This works by allowing any number of child objects to **subscribe** to the object pushing messages.
