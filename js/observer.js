@@ -1,53 +1,53 @@
 const StockObservable = {
-    observers: [],
-    ibmPrice: 0, 
-    aaplPrice: 0, 
-    googPrice: 0,
-    register: function(newObserver) {
-        this.observers.push(newObserver)
-    },
-    unregister: function(delObserver) {
-        let index = this.observers.indexOf(delObserver);
-        console.log('Observer ' + index+1 + ' deleted');
-        this.observers.splice(index, 1)
-    },
-    notifyObservers: function() {
-        this.observers.forEach( observer => {
-            observer.update(this.ibmPrice, this.aaplPrice, this.googPrice);
-        })
-    },
-    setAAPLPrice: function(newPrice) {
-        this.aaplPrice = newPrice;
-        this.notifyObservers();
-    },
-    setIBMPrice: function(newPrice) {
-        this.ibmPrice = newPrice;
-        this.notifyObservers();
-    },
-    setGOOGPrice: function(newPrice) {
-        this.googPrice = newPrice;
-        this.notifyObservers();
-    }
+  observers: [],
+  ibmPrice: 0,
+  aaplPrice: 0,
+  googPrice: 0,
+  register: function (newObserver) {
+    this.observers.push(newObserver)
+  },
+  unregister: function (delObserver) {
+    let index = this.observers.indexOf(delObserver);
+    console.log('Observer ' + index + 1 + ' deleted');
+    this.observers.splice(index, 1)
+  },
+  notifyObservers: function () {
+    this.observers.forEach(observer => {
+      observer.update(this.ibmPrice, this.aaplPrice, this.googPrice);
+    })
+  },
+  setAAPLPrice: function (newPrice) {
+    this.aaplPrice = newPrice;
+    this.notifyObservers();
+  },
+  setIBMPrice: function (newPrice) {
+    this.ibmPrice = newPrice;
+    this.notifyObservers();
+  },
+  setGOOGPrice: function (newPrice) {
+    this.googPrice = newPrice;
+    this.notifyObservers();
+  }
 }
 
 let observerIDTracker = 0;
 
 const StockObserver = {
-    ibmPrice: 0,
-    aaplPrice: 0,
-    googPrice: 0,
-    observerID: 0,
-    stockObservable: null,
-    bindObserverTo: function(stockObservable) {
-        this.stockObservable = stockObservable;
-        this.observerID = observerIDTracker++;
-        stockObservable.register(this);
-    },
-    update: function(ibmPrice, aaplPrice, googPrice) {
-        this.ibmPrice = ibmPrice;
-        this.aaplPrice = aaplPrice;
-        this.googPrice = googPrice;
-    }
+  ibmPrice: 0,
+  aaplPrice: 0,
+  googPrice: 0,
+  observerID: 0,
+  stockObservable: null,
+  bindObserverTo: function (stockObservable) {
+    this.stockObservable = stockObservable;
+    this.observerID = observerIDTracker++;
+    stockObservable.register(this);
+  },
+  update: function (ibmPrice, aaplPrice, googPrice) {
+    this.ibmPrice = ibmPrice;
+    this.aaplPrice = aaplPrice;
+    this.googPrice = googPrice;
+  }
 }
 
 // Create an object to be observed. This is also going to
@@ -79,7 +79,7 @@ stockObservable.setAAPLPrice(9);
 console.log('observer1:');
 console.log(observer1);
 console.log('observer2:');
-console.log(observer2); 
+console.log(observer2);
 console.log('observer3:');
-console.log(observer3); 
+console.log(observer3);
 console.log('stockObservable :', stockObservable.observers);
