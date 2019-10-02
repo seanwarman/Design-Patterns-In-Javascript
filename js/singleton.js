@@ -10,12 +10,24 @@ const Singleton = {
     if (this.firstInstance === null) {
       if(this.firstThread) {
         this.firstThread = false;
-        // ??
+        setTimeout(() => {
+          console.log('Timeout complete.')
+        }, 1000);
       }
       this.firstInstance = Object.create(this.Singleton)
     }
 
     return this.firstInstance;
+  },
+  getLetterList: function() {
+    return this.firstInstance.letterList;
+  },
+  getTiles: function() {
+    let tilesToSend = this.getLetterList();
+    tilesToSend.forEach((letter, i) => {
+      tilesToSend.push(this.firstInstance.letterList.slice(0))
+    })
   }
+
 }
 
