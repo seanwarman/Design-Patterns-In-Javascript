@@ -1,4 +1,6 @@
 # Singleton
+[Code](./js/singleton.js)
+
 Creating a class that will only ever make one instance of an object.
 
 The Singleton pattern allows us to create a class that creates an object

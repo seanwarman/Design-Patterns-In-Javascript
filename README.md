@@ -5,3 +5,4 @@ A repo with examples of Design Patterns as I learn them.
 - [Observer](observer.md) - [Code](./js/observer.js)
 - [Factory](factory.md) - [Code](./js/factory.js)
 - [Strategy](strategy.md) - [Code](./js/strategy.js)
+- [Singleton](singleton.md) - [Code](./js/singleton.js)
