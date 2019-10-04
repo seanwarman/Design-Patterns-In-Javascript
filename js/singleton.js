@@ -1,33 +1,21 @@
 const Singleton = {
-  firstInstance: null,
-  letterList: [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-    's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-  ],
-  firstThread: true,
-  Singleton: {},
+  _firstInstance: null,
+  _singleton: {
+    stuff: 1
+  },
   getInstance: function () {
-    if (this.firstInstance === null) {
-      if(this.firstThread) {
-        this.firstThread = false;
-        setTimeout(() => {
-          console.log('Timeout complete.')
-        }, 1000);
-      }
-      this.firstInstance = Object.create(this.Singleton)
+    if (this._firstInstance === null) {
+      this._firstInstance = Object.create(this._singleton)
     }
 
-    return this.firstInstance;
+    return this._firstInstance;
   },
-  getLetterList: function() {
-    return this.firstInstance.letterList;
-  },
-  getTiles: function() {
-    let tilesToSend = this.getLetterList();
-    tilesToSend.forEach((letter, i) => {
-      tilesToSend.push(this.firstInstance.letterList.slice(0))
-    })
-  }
-
 }
 
+const thing1 = Singleton.getInstance();
+const thing2 = Singleton.getInstance();
+console.log('thing1.stuff :', thing1.stuff);
+console.log('thing2.stuff :', thing2.stuff);
+thing1.stuff = 2;
+console.log('thing1.stuff :', thing1.stuff);
+console.log('thing2.stuff :', thing2.stuff);
