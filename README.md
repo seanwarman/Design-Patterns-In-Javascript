@@ -6,3 +6,4 @@ A repo with examples of Design Patterns as I learn them.
 - [Factory](factory.md) - [Code](./js/factory.js)
 - [Strategy](strategy.md) - [Code](./js/strategy.js)
 - [Singleton](singleton.md) - [Code](./js/singleton.js)
+- [Builder] - [Code](./js/builder.js)
