@@ -2,7 +2,7 @@
 const NoCard = {
   insertCard: function() {
     console.log('Inserting a card...');
-    setAtmState(Object.create(HasCard));
+    setAtmState(HasCard);
   },
   removeCard: function() {
     console.log('No card to remove.');
@@ -17,14 +17,14 @@ const HasCard = {
   },
   removeCard: function() {
     console.log('Removing card...');
-    setAtmState(Object.create(NoCard));
+    setAtmState(NoCard);
   }
 };
 
 // The function each state can use to transfer the
 // atmMachine object, our interface, to a different state.
 function setAtmState(newState) {
-  atmMachine = newState;
+  atmMachine = Object.create(newState);
 }
 
 // Start the atmMachine in the NoCard state. 

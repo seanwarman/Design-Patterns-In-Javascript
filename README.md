@@ -7,3 +7,4 @@ A repo with examples of Design Patterns as I learn them.
 - [Strategy](strategy.md) - [Code](./js/strategy.js)
 - [Singleton](singleton.md) - [Code](./js/singleton.js)
 - [Builder] - [Code](./js/builder.js)
+- [Prototype] - [Code](./js/prototype.js)

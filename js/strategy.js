@@ -26,6 +26,7 @@ const Bird = function (name) {
   obj.setName(name);
   return obj;
 }
+
 const Dog = function (name) {
   let obj = Object.create(Animal);
   obj.setName(name);
@@ -39,6 +40,7 @@ const ItFlys = {
     console.log('Flying high');
   }
 };
+
 const CantFly = {
   fly: function() {
     console.log('I can\'t fly');

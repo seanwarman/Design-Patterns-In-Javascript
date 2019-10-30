@@ -27,7 +27,7 @@ In turn, the **Observers** hold an instance of the **Observerable** as well.
 }
 ```
 
-The properties for each Of the object's "classes" are as follows:
+The properties for each of the object's "classes" are as follows:
 
 ```js
 Observerable = {
