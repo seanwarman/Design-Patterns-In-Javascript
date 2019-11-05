@@ -8,3 +8,4 @@ A repo with examples of Design Patterns as I learn them.
 - [Singleton](singleton.md) - [Code](./js/singleton.js)
 - [Builder] - [Code](./js/builder.js)
 - [Prototype] - [Code](./js/prototype.js)
+- [Decorator] - [Code](./js/decorator.js)
