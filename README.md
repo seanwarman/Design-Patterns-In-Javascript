@@ -9,3 +9,4 @@ A repo with examples of Design Patterns as I learn them.
 - [Builder] - [Code](./js/builder.js)
 - [Prototype] - [Code](./js/prototype.js)
 - [Decorator] - [Code](./js/decorator.js)
+- [Command] - [Code](./js/decorator.js)
