@@ -26,7 +26,7 @@ const EnemyRobotAdapter = {
   },
 }
 
-// Create new instance of each object type.
+// Create a new instance of each object type.
 const enemyTank = Object.create(EnemyTank);
 const robotTank = Object.create(EnemyRobot);
 
@@ -39,10 +39,10 @@ try {
   console.log('The fireWeapon method doesn\'t exist on robotTank!');
 }
 
-// So We use an adapter...
+// So we use an adapter...
 const robotAdapter = Object.create(EnemyRobotAdapter);
 robotAdapter.init(robotTank);
 
-// Now we can call the same methods on the robot that we can
+// Now we can call the same methods on the robot that we
 // use on the normal enemy tank...
 robotAdapter.fireWeapon();
