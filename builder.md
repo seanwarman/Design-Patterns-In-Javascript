@@ -1,4 +1,6 @@
 # Builder
+[Code](./js/builder.js)
+
 A **Builder** is a blueprint for creating objects that have the same properties but different values.
 
 A *Robot* builder would need an object to initially hold the properties similar to all robot types. We know all robots will have a head, torso, arms and legs.
