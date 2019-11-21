@@ -7,7 +7,7 @@ This works by allowing any number of child objects to **subscribe** to the objec
 
 This is actually already built in to Javascript because every <button> element can be subscribed to using `button.addEventListener`.
 
-To do this the <button>, the thing being observed or the **Observable**, needs to tell the event listeners, or the **Observers**, when it has changed.
+To do this the `<button>`, the thing being observed or the **Observable**, needs to tell the event listeners, or the **Observers**, when it has changed.
 
 The **Observable** keeps an array of **Observers** that are able to update themselves whenever the **Observable** is updated.
 
